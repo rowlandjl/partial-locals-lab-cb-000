@@ -15,6 +15,7 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
   
   def self.search(query)
-    self.where("name LIKE ?", arg)
+    if query.present?
+      
   end 
 end
